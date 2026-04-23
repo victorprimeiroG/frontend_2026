@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Jogador da Copa do Mundo</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg-copa {
+            background-image: url('img/FIFA-World-Cup-26.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            backdrop-filter: blur(6px);
+            background-color: rgba(255, 255, 255, 0.92);
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .tabela {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg-copa">
+
+    <img src="Tabela_Jogos.png" 
+         alt="Tabela de Jogos da Copa" 
+         class="tabela"
+         loading="lazy">
+
+    <div id="Cards" class="d-flex flex-row flex-wrap justify-content-center gap-3">
+
+        <div class="card" style="width: 22rem;">
+            <img src="_vinicius_junior.png" 
+                 class="card-img-top" 
+                 alt="Vinicius Junior"
+                 loading="lazy">
+
+            <div class="card-body">
+                <h5 class="card-title">
+                    Vini Jr.
+                    <span class="badge text-bg-secondary">9,5</span>
+                </h5>
+
+                <p class="card-text">
+                    <strong>Nascimento:</strong> 12/07/2000 <br>
+                    <strong>Altura:</strong> 1,76 m <br>
+                    <strong>Posição:</strong> Ponta-esquerda / Atacante
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <button onclick="add()" class="btn btn-primary mt-4">
+        Adicionar Novo Jogador
+    </button>
+
+</div>
+
+<script src="js/bootstrap.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
